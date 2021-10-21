@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  width: 20%;
+}
+
+th,
+td {
+  font-size: 1.6rem;
+}
+
+thead {
+  height: 3rem;
+}
+
+tbody > tr {
+  border-bottom: 0.1rem solid black;
+  height: 3rem;
+}
+
+.process {
+  background-color: #4682b4 !important;
+}
+
+@media screen and (max-width: 768px) {
+  th,
+  td {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,109 @@
+#content-wrapper {
+  height: 100vh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 4rem 2fr auto;
+  grid-template-areas:
+    "name email"
+    "message message"
+    "button button";
+  grid-gap: 1rem;
+  gap: 1rem;
+  box-sizing: border-box;
+  width: 70%;
+  height: 40%;
+}
+
+form input:nth-child(1) {
+  grid-area: name;
+}
+
+form input:nth-child(2) {
+  grid-area: email;
+}
+
+form textarea {
+  grid-area: message;
+  resize: vertical;
+  min-height: 2rem;
+  max-height: 20rem;
+}
+
+form button {
+  grid-area: button;
+}
+
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  border: 0.1rem solid #d7d8da;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: steelblue;
+  box-shadow: 0 0 0.2rem steelblue;
+}
+
+form button {
+  background-color: steelblue;
+  border: none;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form button:hover {
+  background-color: rgb(48, 99, 141);
+}
+
+@media screen and (max-width: 768px) {
+  #content-wrapper {
+    padding: 6rem 1rem;
+    grid-template-rows: auto auto;
+  }
+
+  input,
+  textarea {
+    font-size: 1.2rem;
+  }
+
+  form {
+    width: 60%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 4rem) 8rem auto;
+    grid-template-areas:
+      "name"
+      "email"
+      "message"
+      "button";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  form {
+    width: 100%;
+  }
+}

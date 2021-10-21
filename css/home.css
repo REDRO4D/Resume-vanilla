@@ -1,0 +1,102 @@
+#content-wrapper {
+  overflow-y: hidden;
+  padding: 0;
+}
+
+.hero {
+  background-color: #161a1d;
+  background-image: url("./../resource/hero-bg.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .message {
+  position: relative;
+  z-index: 2;
+  /* display: flex; */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero > * {
+  color: white;
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1.8rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.text-wrapper {
+  display: flex;
+}
+
+.cursor {
+  display: block;
+  position: relative;
+  width: 0.2rem;
+  background-color: white;
+  margin-left: 0.2rem;
+}
+
+.typed {
+  animation: typed 0.5s ease infinite;
+}
+
+@keyframes typed {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.image-author {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.2rem;
+  margin: 0.5rem;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: black;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0.2rem;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}

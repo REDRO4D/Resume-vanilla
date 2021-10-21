@@ -1,0 +1,163 @@
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.card {
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 25rem;
+  background-color: white;
+  width: 30rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.title h2 {
+  font-size: 1.4rem;
+}
+
+.title p {
+  font-size: 1.2rem;
+}
+
+.title a {
+  color: #2a2a72;
+  text-decoration: none;
+}
+
+.title a:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+form input {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+form button {
+  background-color: #009ffd;
+  border: 0.1rem solid #009ffd;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+form button:hover {
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.separator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.separator p {
+  font-size: 1.2rem;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 40%;
+  height: 0.1rem;
+  background-color: black;
+}
+
+.login-with {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-with button {
+  border: 0.1rem solid gray;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-with button svg,
+.login-with button span {
+  width: 2rem;
+  height: 2rem;
+}
+.login-with button span {
+  display: block;
+}
+
+.login-with button p {
+  color: #000;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.login-with button:hover {
+  border-color: #2a2a72;
+  background-color: #2a2a72;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.login-with button:hover p {
+  color: white;
+}
+
+.login-with button:hover svg {
+  fill: white;
+}
+
+.login-with button:first-of-type:hover {
+  background: rgb(0, 135, 68);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 135, 68, 1) 0%,
+    rgba(0, 87, 231, 1) 35%,
+    rgba(214, 45, 32, 1) 69%,
+    rgba(252, 165, 0, 1) 100%
+  );
+  border-color: transparent;
+}
+
+.login-with button:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
